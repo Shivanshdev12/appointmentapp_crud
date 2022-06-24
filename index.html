@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment App</title>
+</head>
+<script>
+    function submitform(e) {
+        e.preventDefault();
+        submitData(e);
+    }
+</script>
+
+<body>
+    <div class="container">
+        <form action="#" onsubmit="submitform(event)">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter your name" id="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your email address" id="email">
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" id="phone">
+            <button id="submit">Submit</button>
+        </form>
+        <div>
+            <ul id="items"></ul>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+<script src="script.js"></script>
+
+</html>
