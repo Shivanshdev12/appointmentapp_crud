@@ -1,26 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Nunito:wght@500;700&family=Roboto&display=swap');
+
+body {
+    background-color: #292F3F;
+    color: #112A46;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    color: #fff;
+}
+
 .container {
-    max-width: 50%;
-    margin-top: 5%;
+    text-align: center;
     font-size: calc(0.75em + 1vmin);
+}
+
+form {
+    background-color: #373E4E;
+    padding: 3.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 8px -5px black;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-child {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    padding: 0.75em 0;
+    color: #fff;
+}
+
+input {
+    padding: 5px 10px;
+    border: none;
+}
+
+.btn-submit {
+    margin: 0.75em 0;
+    background-color: #0f766e;
+    color: #fff;
+    border: 1px;
+    padding: 5px 0;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 ul {
     list-style: none;
-    text-align: left;
 }
 
 li {
-    margin-top: 2%;
+    padding: 0.75em;
+    /* background-color: #292F3F; */
+    margin-top: 5px;
+    border-radius: 5px;
+    color: #fff;
 }
 
-h1 {
-    text-align: center;
-}
 
 .btn {
-    padding: 0.25rem 0.5rem;
-}
-
-#submit {
-    margin-top: 3%;
+    padding: 2px 5px;
+    margin: 0 5px;
+    background-color: #F18303;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }

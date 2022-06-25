@@ -44,8 +44,7 @@ function addNewUser(user) {
   li.className = "item-list";
   const Edit = document.createElement("button");
   Edit.appendChild(document.createTextNode("Edit"));
-  Edit.className = "btn btn-success";
-  Edit.classList.add("mx-2");
+  Edit.classList.add("btn");
   Edit.addEventListener("click", () => {
     document.getElementById("name").value = user.name;
     document.getElementById("email").value = user.email;
@@ -62,8 +61,7 @@ function addNewUser(user) {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.appendChild(document.createTextNode("Delete"));
-  deleteBtn.className = "btn btn-danger";
-  deleteBtn.classList.add("mx-2");
+  deleteBtn.classList.add("btn");
   deleteBtn.addEventListener("click", () => {
     axios
       .delete(
