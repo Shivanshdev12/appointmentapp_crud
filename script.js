@@ -1,10 +1,10 @@
-const API = "https://crudcrud.com/api/2da5248cde0548ebb4891d123ed6f139";
+const API = "https://crudcrud.com/api/c24cf12c0c5d4d01b1060c47550ab76d";
 const submitBtn = document.getElementById("submit");
 
 window.addEventListener("DOMContentLoaded", function (e) {
   axios
     .get(
-      "https://crudcrud.com/api/2da5248cde0548ebb4891d123ed6f139/appointments"
+      "https://crudcrud.com/api/c24cf12c0c5d4d01b1060c47550ab76d/appointments"
     )
     .then((res) => {
       Array.from(res.data).forEach((user) => {
@@ -25,7 +25,7 @@ function submitData(e) {
   };
   axios
     .post(
-      `https://crudcrud.com/api/2da5248cde0548ebb4891d123ed6f139/appointments`,
+      `https://crudcrud.com/api/c24cf12c0c5d4d01b1060c47550ab76d/appointments`,
       user
     )
     .then((res) => addNewUser(res.data))
@@ -40,17 +40,19 @@ function addNewUser(user) {
       `Name: ${user.name}, Email: ${user.email}, Phone: ${user.Phone}`
     )
   );
-  li.id = `${user.id}`;
+  li.id = `${user._id}`;
   li.className = "item-list";
   const Edit = document.createElement("button");
   Edit.appendChild(document.createTextNode("Edit"));
+  Edit.className = "btn btn-success";
+  Edit.classList.add("mx-2");
   Edit.addEventListener("click", () => {
     document.getElementById("name").value = user.name;
     document.getElementById("email").value = user.email;
     document.getElementById("phone").value = user.Phone;
     axios
       .delete(
-        `https://crudcrud.com/api/2da5248cde0548ebb4891d123ed6f139/appointments/${user._id}`
+        `https://crudcrud.com/api/c24cf12c0c5d4d01b1060c47550ab76d/appointments/${user._id}`
       )
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
@@ -60,10 +62,12 @@ function addNewUser(user) {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.appendChild(document.createTextNode("Delete"));
+  deleteBtn.className = "btn btn-danger";
+  deleteBtn.classList.add("mx-2");
   deleteBtn.addEventListener("click", () => {
     axios
       .delete(
-        `https://crudcrud.com/api/2da5248cde0548ebb4891d123ed6f139/appointments/${user._id}`
+        `https://crudcrud.com/api/c24cf12c0c5d4d01b1060c47550ab76d/appointments/${user._id}`
       )
       .then((res) => console.log(res.data))
       .catch((err) => console.error(err));
